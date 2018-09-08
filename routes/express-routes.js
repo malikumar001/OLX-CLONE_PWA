@@ -73,6 +73,10 @@ module.exports = app => {
     console.log(req.body);
   });
 
+  app.get('/google', (req, res) => {
+      res.send({name: 'Hassan', roll: 1234});
+  });
+
 app.get("/api/allads", (req, res) => {
 
     Ad.find({}, (err, allads) =>  res.send({allads})
