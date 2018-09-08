@@ -1,0 +1,75 @@
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+.mobile-icon {
+    color: #5C2784;
+}
+
+.bike-icon {
+    color: #FF7700;
+}
+
+.animal-icon {
+    color: #007686;
+}
+
+.job-icon {
+    color: #54942D;
+}
+
+.home-icon {
+    color: #E22726;
+}
+
+  .flex-container  div {
+    margin-top: 40px;
+    font-size: 30px;
+    margin-left: 54px;
+  }
+
+  .icon-name {
+      font-size: 15px;
+      font-weight: bold;
+      margin-left: 1px;
+  }
+
+  .flex-container a {
+      text-decoration: none;
+      color: #8395a7;
+      padding: 7px;
+
+    }
+
+
+    .flex-container a:hover {
+        background: #7e92a532;
+        border-radius: 4px;
+    }
+  
+    .button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .button-container button {
+        
+        border: 1px solid #2965BE;
+        padding: 10px;
+        background: #2965BE;
+        border-radius: 5px;
+    }
+
+    .button-container button:hover {
+        
+        
+        background: rgb(76, 119, 184);
+    }
+
+    .button-container a {
+
+        color: #fff;
+    }

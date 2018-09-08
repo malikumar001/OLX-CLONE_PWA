@@ -1,0 +1,93 @@
+.toolbar {
+    position: absolute;
+    top: 0;
+    left:0;
+    background: #2965BE;
+    width: 100%;
+    height: 65px;
+}
+
+.toolbar-navigation {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.toolbar-logo {
+    margin-left: 1rem;
+}
+
+.toolbar-logo a img {
+    height: 65px;
+    width: auto;
+}
+
+.toolbar-navigation-items ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+}
+
+.toolbar-navigation-items li {
+    padding: 0 0.5rem;
+}
+
+.my-user {
+    border: 1px solid #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 20px;
+    color: #2965BE;
+    font-weight: bold;
+    padding: 9px 15px;
+
+}
+
+.my-user:hover {
+    
+    color: #ff7700;
+}
+
+.submit-ad {
+    color: #fff;
+    font-weight: bold;
+    border-radius: 3px;
+    background: #ff7700;
+    padding: 13px 21px;
+
+}
+
+.submit-ad:hover {
+    color: #fff;
+    background: #e98126; 
+}
+
+.toolbar-navigation-items a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.flexer {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .toolbar-navigation-items {
+        display: none;
+    }
+}
+@media (max-width: 769px) {
+    .toolbar-navigation-items {
+        display: none;
+    }
+}
+.logout {
+    font-size: 20px
+}
+
+.logout :hover {
+    color: #ff7700;
+}

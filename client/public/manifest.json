@@ -1,0 +1,15 @@
+{
+  "short_name": "OLX",
+  "name": "OLX #1 Website of Pakistan",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16 192x192 512x512",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#ff6358",
+  "background_color": "#dbe2ea"
+}

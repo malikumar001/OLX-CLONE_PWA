@@ -1,0 +1,108 @@
+#footer-container {
+    background: url(../../assets/footer-img.png) repeat-x;
+    background-position: bottom center;
+    background-size: contain;
+    border-top: 2px solid #eee;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 17%;
+}
+
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1}
+
+.span_3_of_3 { width: 100%; }
+.span_2_of_3 { width: 66.13%; }
+.span_1_of_3 { width: 32.26%; }
+
+@media only screen and (max-width: 480px) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
+}
+
+
+.olx-logo {
+    height: 100px;
+    width: auto;
+    margin: 0 100px;
+}
+
+.flex-container-link{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    margin-left: 10px;
+    
+}
+
+.flex-container-link a{
+    text-decoration: none;
+    color: black;
+
+}
+
+.flex-container-link a:hover{
+    color: #ff7700;
+    border-bottom: 1px solid #ff7700;
+    padding-bottom: 1px;
+
+}
+
+.flexUse {
+    display: flex;
+  flex-direction: row;
+}
+
+.contact-us {
+    margin-top: 10px;
+}
+
+.contact-us a {
+    text-decoration: none;
+    color: gray;
+    margin-left: 5px;
+    padding: 3px;
+    
+}
+
+.who {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.who-we-are {
+    font-size: 16px;
+    margin: 50px 40px;
+    text-align: justify;
+    color: #000;
+    font-weight: bold;
+}
+
+#email-link {
+    color:  #448aff;
+    padding: 3px; 
+
+}
+
+
+#email-link:hover {
+    border-bottom: #448aff solid 1px;
+    padding: 3px; 
+}

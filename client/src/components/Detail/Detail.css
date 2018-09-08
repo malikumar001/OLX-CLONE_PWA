@@ -1,0 +1,116 @@
+
+.main-container {
+	display: flex;
+	flex-wrap: wrap;	
+	margin-top: 105px; 
+}
+
+
+.left-container-child {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #e0e0e0;
+	border-radius: 5px;
+	margin-left: 10px;
+	padding: 10px;
+}
+
+
+
+@media screen and (min-width: 810px) {
+    .left-container{
+		width: 60%;
+	};
+} 
+
+.left-side-container {
+	display: flex;
+	flex-direction: column;
+	margin-top: 122px;
+	margin-left: 25px;
+	margin-bottom: 20px;
+	
+
+} 
+ 
+	/* ==========================PRICE=============================== */
+
+
+.price-container {
+	
+	display: flex;
+	position: relative;
+    right: 45px;
+	
+ }  
+
+.price-container .price {
+	background: #ffee7e;
+	 padding: 25px; 
+	font-size: 35px;
+	border-radius: 5px;
+
+}
+
+.left-triangle {
+	width: 0;
+    height: 0;
+    border-top: 35px solid transparent;
+    border-right: 22px solid #ffee7e;
+	border-bottom: 32px solid transparent;
+	
+}
+
+@media screen and (max-width: 810px) {
+    .left-triangle {
+		display: none;
+	};
+	.price-container .price {
+		margin-left: 40px;
+	
+	}
+} 
+
+.user-status{
+	margin-left: 40px;
+}
+
+@media screen and (max-width: 810px) {
+    
+	.price-container .price {
+		margin-left: 45px;
+	
+	}
+
+} 
+
+.userDataBox {
+	background: #e1f5fe;
+	margin-top: 10px;
+	padding: 15px;
+	font-weight: bold;
+	border-radius: 5px;
+}
+
+.user-phone span{
+	color: green;
+	font-size: 15px;
+	margin-left: 5px;
+} 
+
+.upper-border {
+	border-bottom: 1px solid #e0e0e0;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+
+}
+
+.detail-container {
+	display: flex;
+	flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.detail-container div {
+	margin: 10px;
+}
