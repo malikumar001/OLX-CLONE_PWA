@@ -24,8 +24,8 @@ passport.use(
     {
       clientID: keys.googleClientID,
       clientSecret: keys.googleClientSecret,
-      callbackURL: "/auth/google/callback", //this is the url where the user will send after grant Permission
-      proxy: true 
+      callbackURL: "https://gentle-river-36339.herokuapp.com//auth/google/callback", //this is the url where the user will send after grant Permission
+     
     },
     async (accessToken, refreshToken, profile, done) => {
       const existingUser = await User.findOne({

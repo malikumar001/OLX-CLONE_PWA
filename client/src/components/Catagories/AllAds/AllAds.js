@@ -10,7 +10,7 @@ class AllAds extends Component {
 
     render() {
             const data = this.props.fetchAd.reverse();
-            
+            console.log(data)
             
         return (
 
