@@ -35,6 +35,7 @@ class SubmitAd extends Component {
         phone: '',
         detail: '',
         price: '0',
+        milliSeconds: new Date().getTime(),
         location: '',
         featured: false,
         catagory: '',
@@ -78,7 +79,7 @@ class SubmitAd extends Component {
     return errors;
   }
 
-
+  
 
   handleSubmit(e) {
     e.preventDefault();
@@ -88,7 +89,7 @@ class SubmitAd extends Component {
 
     if (Object.keys(errors).length === 0) {
       const { selectedFile, selectedFile1, selectedFile2, selectedFile3, email, name, profilePic, product, phone,
-        detail, price, location, catagory, featured, uniqueId } = this.state.userData;
+        detail, price, location, catagory, featured, uniqueId, milliSeconds } = this.state.userData;
 
       let formData = new FormData();
 
@@ -98,6 +99,7 @@ class SubmitAd extends Component {
       formData.append('uniqueId', uniqueId);
       formData.append('product', product);
       formData.append('phone', phone);
+      formData.append('milliSeconds', milliSeconds);
       formData.append('detail', detail);
       formData.append('price', price);
       formData.append('location', location);
@@ -140,6 +142,7 @@ class SubmitAd extends Component {
         break;
 
       case 'selectedFile1':
+
         this.setState({ userData: { ...this.state.userData, selectedFile1: e.target.files[0] } });
         this.setState({ displayImages: { ...this.state.displayImages, image2: URL.createObjectURL(e.target.files[0]), showImage2: true } });
         break;
@@ -283,20 +286,7 @@ console.log(this.state.userData);
           </div>
           <FormErrorMessage content={errors.catagory} type="error" />
 
-<div className={errors.location ? "field error" : "field"}>
 
-              <label>Location</label>
-
-              <input
-                type="text"
-                name="location"
-                value={userData.location}
-                onChange={this.handleStringChange}
-                placeholder="City name"
-              />
-              <FormErrorMessage content={errors.location} type="error" />
-
-            </div>
 {/* // {/*  ================================================================ */}
 
                   <div className="inline-field">

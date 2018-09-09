@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import './Catagories.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import LatestAds from '../Latest/LatestAds';
+import Social from '../Social/Social';
 
 
 class Catagories extends Component {
@@ -41,10 +42,13 @@ class Catagories extends Component {
 
             <div className="button-container">
             
-           <button> <Link to="/catagories/all-ads">Show all Posts</Link></button>
+           <button> <Link to="/catagories/all-ads">Show all ads</Link></button>
            
             </div>
 
+            <div>
+                <Social />
+            </div>
             
             </div>
             

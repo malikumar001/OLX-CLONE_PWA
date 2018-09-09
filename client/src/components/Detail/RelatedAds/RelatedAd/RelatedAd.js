@@ -2,6 +2,21 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const RelatedAd = ({ card }) => {
+    const milliSeconds = (new Date().getTime() - card.milliSeconds);
+    const timeInMinutes = Math.floor(milliSeconds / 1000 / 60) ;
+    const timeInHours = Math.floor(timeInMinutes / 60);
+    const timeInDays = Math.floor(timeInHours / 24);
+    
+   let time;
+   if ( timeInMinutes <= 60 ) {
+        time = `${timeInMinutes} min ago`;
+   }else if (timeInHours <= 24) {
+        time = `${timeInHours} hours ago`;
+   }else{
+    time = `${timeInDays} days ago`;
+   }
+
+   
 
     return (
 
@@ -29,10 +44,10 @@ const RelatedAd = ({ card }) => {
 
             <div className="content">
 
-                <a href={`/ad/related/${card._id}`}>My Game</a>
+                <a href={`/ad/related/${card._id}`}>Product Name</a>
                 <div className="meta">
-                    <i className='icon user' /> {card.location}&nbsp;
- <i className='icon wait' /> 46 min
+                    <i className='icon user' />{card.name}&nbsp;
+ <i className='icon wait' /> {time}
       <Link to={`/ad/${card._id}`} className="right floated">More details</Link>
                 </div>
             </div></div>

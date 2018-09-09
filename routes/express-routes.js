@@ -54,6 +54,7 @@ module.exports = app => {
       profilePic: req.body.profilePic,
       uniqueId: req.body.uniqueId,
       phone: req.body.phone,
+      milliSeconds: req.body.milliSeconds,
       detail: req.body.detail,
       price: req.body.price,
       featured: req.body.featured,

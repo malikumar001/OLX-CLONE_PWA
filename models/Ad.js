@@ -10,6 +10,7 @@ const AdSchema = new Schema({
     profilePic: String,
     uniqueId: String,
     phone: String,
+    milliSeconds: Number,
     detail: String,
     price: Number,
     location: String,

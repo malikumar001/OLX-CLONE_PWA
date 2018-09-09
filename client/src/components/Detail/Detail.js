@@ -129,7 +129,7 @@ class Detail extends Component {
 								<FontAwesomeIcon style={{ marginRight: '5px' }} icon="phone" />
 
 								0{this.state.data.phone}
-								<span>(Varified)</span>
+								<span>(Verified)</span>
 							</div>
 
 							<div className="userDataBox">

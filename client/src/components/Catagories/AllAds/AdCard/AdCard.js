@@ -6,6 +6,23 @@ import './AdCard.css';
 
 const AdCard = ({card}) => {
     
+    const milliSeconds = (new Date().getTime() - card.milliSeconds);
+    const timeInSeconds = Math.floor(milliSeconds / 1000);
+    const timeInMinutes = Math.floor(milliSeconds / 1000 / 60) ;
+    const timeInHours = Math.floor(timeInMinutes / 60);
+    const timeInDays = Math.floor(timeInHours / 24);
+    
+   let time;
+   if ( timeInSeconds <= 60 ) {
+            time = `${timeInSeconds} sec ago`
+   }else if ( timeInMinutes <= 60 ) {
+        time = `${timeInMinutes} min ago`;
+   }else if (timeInHours <= 24) {
+        time = `${timeInHours} hours ago`;
+   }else{
+    time = `${timeInDays} days ago`;
+   }
+
     return (
         
         <div id="allAds" className="ui card">
@@ -32,10 +49,10 @@ const AdCard = ({card}) => {
      
      <div className="content">
      
-     <Link to={`/ad/${card._id}`}>My Game</Link>
+     <Link to={`/ad/${card._id}`}>{card.product.substring(0, 40)}</Link>
      <div className="meta">
- <i className='icon user'/> {card.location}&nbsp;
- <i className='icon wait'/> 46 min
+ <i className='icon user'/> {card.name}&nbsp;
+ <i className='icon wait'/> {time}
       <Link to={`/ad/${card._id}`} className="right floated">More details</Link>
 </div>
 </div></div>
