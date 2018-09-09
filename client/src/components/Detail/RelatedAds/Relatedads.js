@@ -5,27 +5,29 @@ import { connect } from 'react-redux';
 
 import './RelatedAds.css';
 import AdCard from '../../Catagories/AllAds/AdCard/AdCard';
+import RelatedAd from './RelatedAd/RelatedAd';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const RelatedAds = ({ card, fetchAd }) => {
 
     // console.log(card);
     // console.log(fetchAd);
-    const ad = fetchAd.filter(ad => ad.uniqueId === card.uniqueId)
+    const ad = fetchAd.filter(ad => ad.uniqueId === card.uniqueId);
     return (
         <div>
-<div className="heading-container">
+            <div className="related-container">
            {
-               ad.length !== 0 ?  <h1>This user submit only one ad</h1> :
-               <span className='submit-ads'>Recently Submitted Ads By User:</span>
+               ad.length === 0 ?  <h1 className="notfound-ads">No Ads Available Related to this User!</h1> :
+               <h1 className='submit-ads'>Recently Submitted Ads By this User:</h1>
            }
      
      </div>
-        <div class="ui link cards">
+        <div id="related-card-container" className="ui link cards">
         
         {
         
-    ad.map(card => <AdCard key={card._id} card={card}/>) 
+        ad.map(cad => <RelatedAd key={cad._id} card={cad}/>) 
+        // ad.map(cad => <AdCard key={cad._id} card={cad}/>) 
         }
 
         </div>

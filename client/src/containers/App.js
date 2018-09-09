@@ -91,6 +91,7 @@ class App extends Component {
                             <Route path='/catagories/furniture' exact component={Furniture} />
                             <Route path='/catagories/books' exact component={Book} />
                             <Route path='/ad/:_id' exact component={Detail} />
+                            <Route path='/ad/related/:_id' exact component={Detail} />
                             <Route component={NotFound} />
                         </Switch>
                         <Footer />

@@ -15,9 +15,7 @@ const RelatedAd = ({ card }) => {
                     ) : undefined
                 }
 
-
-
-                <Link to={`/ad/${card._id}`}>
+                <a href={`/ad/related/${card._id}`}>
                     <img width="100%"
                         src={
                             card.image1 ?
@@ -25,13 +23,13 @@ const RelatedAd = ({ card }) => {
                                 : 'https://semantic-ui.com/images/wireframe/image.png'
                         } alt="game-img" />
 
-                </Link>
+                </a>
 
             </div>
 
             <div className="content">
 
-                <Link to={`/ad/${card._id}`}>My Game</Link>
+                <a href={`/ad/related/${card._id}`}>My Game</a>
                 <div className="meta">
                     <i className='icon user' /> {card.location}&nbsp;
  <i className='icon wait' /> 46 min
@@ -43,5 +41,6 @@ const RelatedAd = ({ card }) => {
 }
 
 
-
 export default RelatedAd;
+
+

@@ -7,3 +7,22 @@
     margin-top: 10px; 
 }
 
+.notfound-ads{
+    font-size: 20px;
+    color: rgb(255, 208, 0);
+    background: red;
+    padding: 10px;
+    font-weight: bold;
+    margin-top: 10px; 
+}
+
+.related-container {
+    margin-top: 42px;
+    margin-bottom: 42px;
+}
+
+#related-card-container {
+    margin-left: 15px;
+    
+
+}

@@ -21,7 +21,6 @@ class LatestAds extends Component {
 
     render() {
        
-        console.log(this.state.data);
         return (
             <div style={{ marginTop: '80px', marginLeft: '30px', marginRight: '30px' }} className="ui link cards" >
 
