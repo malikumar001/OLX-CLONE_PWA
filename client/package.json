@@ -2,18 +2,7 @@
   "name": "olx",
   "version": "0.1.0",
   "private": true,
-  "proxy": {
-    "/auth/google": {
-      "target": "http://localhost:8000"
-    },
-    "/api/*": {
-      "target": "http://localhost:8000"
-    },
-    "/uploads/" : {
-      "target" : "http://localhost:8000"
-    }
-    
-  },
+  
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.3.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.4",
@@ -38,5 +27,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "sw-precache": "^5.2.1"
   }
 }
