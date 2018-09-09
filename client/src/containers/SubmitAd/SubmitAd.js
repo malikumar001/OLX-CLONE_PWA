@@ -16,7 +16,9 @@ const catagory = [
   { id: 2, name: "Motorbike" },
   { id: 3, name: "Animal" },
   { id: 4, name: "Laptop" },
-  { id: 5, name: "Home" }
+  { id: 5, name: "Home" },
+  { id: 6, name: "Furniture" },
+  { id: 7, name: "Books" }
 ];
 
 

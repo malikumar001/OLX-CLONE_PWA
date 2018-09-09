@@ -24,6 +24,14 @@
     color: #E22726;
 }
 
+.furniture-icon {
+    color: #795548;
+}
+.book-icon {
+    color: #e91e63;
+    
+}
+
   .flex-container  div {
     margin-top: 40px;
     font-size: 30px;
