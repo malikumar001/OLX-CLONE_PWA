@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './SubmitAd.css';
 import axios from 'axios';
 import FormErrorMessage from '../../components/FormErrorMessage/FormErrorMessage';
+import Login from '../Login/Login';
 
 
 
@@ -171,7 +172,9 @@ console.log(this.state.userData);
    
     return (
 
-      <div style={{ marginTop: '120px' }} className="form-container" >
+      this.props.auth ? (
+
+        <div style={{ marginTop: '120px' }} className="form-container" >
         <h1> Fill the form to Submit Ad.</h1>
 
         <form className="ui form"
@@ -331,6 +334,11 @@ console.log(this.state.userData);
         </form>
 
       </div>
+      ) : (
+        <div>
+          <Login />
+        </div>
+      )
 
     );
   }

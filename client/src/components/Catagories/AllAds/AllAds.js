@@ -16,6 +16,7 @@ class AllAds extends Component {
 
             
             <div style={{ marginTop: '80px', marginLeft: '20px', marginRight: '30px' }} className="ui link cards" >
+            <h1 className="head">Ads Of all Catagories</h1>
 
                 {data.length === 0 ? (
                     <div className="ui massive text indeterminate active centered inline loader">Loading</div>

@@ -10,6 +10,7 @@ class Bike extends Component {
         return (
 
             <div style={{ marginTop: '80px', marginLeft: '30px', marginRight: '30px' }} className="ui link cards" >
+            <h1 className="head">MOTORBIKES</h1>
 
                 {filt.filter(cards => cards.catagory === "2").map(cards => <AdCard card={cards} />)}
 

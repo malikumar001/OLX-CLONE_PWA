@@ -23,7 +23,7 @@ class Catagories extends Component {
         const bookLength = filt.filter(item => item.catagory === "7" ).length;
         
         return (
-        <div>
+            <div>
             <div className="flex-container">
     
                 <div><Link to="/catagories/mobiles"><FontAwesomeIcon className="mobile-icon" icon="mobile-alt" /><span className="icon-name">Mobiles ({mobileLength})</span></Link></div>
@@ -36,9 +36,11 @@ class Catagories extends Component {
     
             </div>
 
+
+<h1 className="heading">Latest Ads</h1>
+
             <LatestAds />
     
-            
 
             <div className="button-container">
             

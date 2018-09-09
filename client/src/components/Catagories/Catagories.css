@@ -1,68 +1,51 @@
 .flex-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap:  wrap;
+    margin-left: 12%
   }
-  
-.mobile-icon {
-    color: #5C2784;
-}
 
-.bike-icon {
-    color: #FF7700;
-}
 
-.animal-icon {
-    color: #007686;
-}
+  /* @media (max-width: 490px) {
+    .flex-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 35%;
+    };
 
-.job-icon {
-    color: #54942D;
-}
+} */
 
-.home-icon {
-    color: #E22726;
-}
 
-.furniture-icon {
-    color: #795548;
-}
-.book-icon {
-    color: #e91e63;
-    
-}
 
   .flex-container  div {
-    margin-top: 40px;
-    font-size: 30px;
-    margin-left: 54px;
-  }
-
+      margin-top: 40px;
+    font-size: 35px;
+    margin-left: 20px;
+  } 
+  
   .icon-name {
       font-size: 15px;
       font-weight: bold;
       margin-left: 1px;
-  }
-
-  .flex-container a {
-      text-decoration: none;
-      color: #8395a7;
-      padding: 7px;
-
     }
-
-
+    
+    .flex-container a {
+        text-decoration: none;
+        color: #8395a7;
+        padding: 7px;
+        
+    }
+    
     .flex-container a:hover {
         background: #7e92a532;
         border-radius: 4px;
     }
-  
+    /* ============================================================== */
     .button-container {
         display: flex;
         justify-content: center;
         margin-top: 50px;
     }
-
+    
     .button-container button {
         
         border: 1px solid #2965BE;
@@ -70,14 +53,55 @@
         background: #2965BE;
         border-radius: 5px;
     }
-
+    
     .button-container button:hover {
         
         
         background: rgb(76, 119, 184);
     }
-
+    
     .button-container a {
-
+        
         color: #fff;
     }
+    
+    
+    .heading {
+        
+        font-size: 30px;
+        color: #fff;
+        background: #2965BE;
+        padding: 10px;
+        font-weight: bold;
+        margin-top: 50px; 
+        text-align: center;
+    }
+
+    
+  .mobile-icon {
+      color: #5C2784;
+  }
+  
+  .bike-icon {
+      color: #FF7700;
+  }
+  
+  .animal-icon {
+      color: #007686;
+  }
+  
+  .job-icon {
+      color: #54942D;
+  }
+  
+  .home-icon {
+      color: #E22726;
+  }
+  
+  .furniture-icon {
+      color: #795548;
+  }
+  .book-icon {
+      color: #e91e63;
+      
+  }

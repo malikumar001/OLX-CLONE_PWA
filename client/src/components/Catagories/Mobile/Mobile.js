@@ -12,7 +12,11 @@ class Mobile extends Component {
         
         return (
 
+
             <div style={{ marginTop: '80px', marginLeft: '30px', marginRight: '30px' }} className="ui link cards" >
+
+            <h1 className="head">Mobile Ads</h1>
+
 
              { filt.length === 0 ? (
                

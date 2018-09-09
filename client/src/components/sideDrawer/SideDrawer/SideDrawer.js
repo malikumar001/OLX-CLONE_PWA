@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import './SideDrawer.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -14,10 +15,19 @@ const SideDrawer = (props) => {
   
     return(
       <nav className={drawerClasses}>
-      <ul>
+      <ul className="sideDrawer-links">
          
-          <li><Link to="/login"><FontAwesomeIcon style={{marginRight: '2px'}} icon="user"/>My Account</Link></li>
-          <li><Link to="/submit-ad"><FontAwesomeIcon style={{marginRight: '2px'}} icon="paper-plane"/>Submit an Ad</Link></li>
+        {props.auth ? (
+            <li><a href="/api/logout">({props.auth.name}) Logout</a></li>
+
+        ) : (
+            
+            <li><Link to="/login"><FontAwesomeIcon className="icon-sidebar" icon="user"/>My Account</Link></li>
+        )}
+        
+         
+         
+          <li><Link to={props.auth ? "/submit-ad" : "/login" }><FontAwesomeIcon className="icon-sidebar"  icon="paper-plane"/>Submit an Ad</Link></li>
 
       </ul>
       </nav>
@@ -27,4 +37,12 @@ const SideDrawer = (props) => {
     );
 }
 
-export default SideDrawer;
+// export default SideDrawer;
+const mapStateToProps = ({ auth }) => {
+
+    return { auth }
+}
+
+export default connect(mapStateToProps)(SideDrawer);
+
+

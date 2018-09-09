@@ -11,6 +11,7 @@ class Animal extends Component {
         return (
 
             <div style={{ marginTop: '80px', marginLeft: '30px', marginRight: '30px' }} className="ui link cards" >
+            <h1 className="head">Animals</h1>
 
                 {filt.filter(cards => cards.catagory === "3").map(cards => <AdCard card={cards} />)}
 

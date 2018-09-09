@@ -12,6 +12,7 @@ class Book extends Component {
         return (
 
             <div style={{ marginTop: '80px', marginLeft: '30px', marginRight: '30px' }} className="ui link cards" >
+            <h1 className="head">Books</h1>
 
              { filt.length === 0 ? (
                

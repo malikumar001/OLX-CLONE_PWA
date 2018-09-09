@@ -13,6 +13,24 @@
 
 }
 
+.sideDrawer-links {
+    background: #2965BE;
+}
+
+.sideDrawer-links li a {
+        
+    color: #fff;
+    font-size: 20px;
+}
+
+.sideDrawer-links li a:hover {
+        
+    color: rgb(182, 178, 178);
+}
+
+.icon-sidebar {
+    margin-right: 10px
+}
 
 .side-drawer ul {
     height: 100%;
