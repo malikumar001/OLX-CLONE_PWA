@@ -44,7 +44,7 @@ const RelatedAd = ({ card }) => {
 
             <div className="content">
 
-                <a href={`/ad/related/${card._id}`}>Product Name</a>
+                <a href={`/ad/related/${card._id}`}>{card.product.substring(0, 40)}</a>
                 <div className="meta">
                     <i className='icon user' />{card.name}&nbsp;
  <i className='icon wait' /> {time}

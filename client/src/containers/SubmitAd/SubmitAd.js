@@ -29,6 +29,18 @@ class SubmitAd extends Component {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this)
 
+
+    const date = new Date()
+    const monthDate =  date.getDate();
+    
+    var months = ["January", "February", "March",
+                   "April", "May", "June", "July",
+                   "August", "September", "October",
+                    "November", "December"];
+    const monthName = months[date.getMonth()];
+    const year = date.getFullYear()
+
+
     this.state = {
       userData: {
         email: '',
@@ -37,6 +49,7 @@ class SubmitAd extends Component {
         detail: '',
         price: '0',
         milliSeconds: new Date().getTime(),
+        date: `${monthDate} ${monthName}, ${year}`,
         location: '',
         featured: false,
         catagory: '',
@@ -90,7 +103,7 @@ class SubmitAd extends Component {
 
     if (Object.keys(errors).length === 0) {
       const { selectedFile, selectedFile1, selectedFile2, selectedFile3, email, name, profilePic, product, phone,
-        detail, price, location, catagory, featured, uniqueId, milliSeconds } = this.state.userData;
+        detail, price, location, catagory, featured, uniqueId, milliSeconds, date } = this.state.userData;
 
       let formData = new FormData();
 
@@ -101,6 +114,7 @@ class SubmitAd extends Component {
       formData.append('product', product);
       formData.append('phone', phone);
       formData.append('milliSeconds', milliSeconds);
+      formData.append('date', date);
       formData.append('detail', detail);
       formData.append('price', price);
       formData.append('location', location);

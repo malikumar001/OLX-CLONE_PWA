@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import GetDate from './Date/Date';
+// import GetDate from './Date/Date';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -45,7 +45,12 @@ class Detail extends Component {
 						<div className="upper-border">
 							<h1>{this.state.data.product}</h1>
 							<div className="detail-container">
-								<div> <GetDate /> </div>
+								<div>
+								<p className="date-location"><FontAwesomeIcon className="calender-icon" icon="calendar-alt"/><span style={{marginLeft: '8px'}}>Added on: {this.state.data.date} </span></p>
+									  </div>
+
+        
+
 
 								<div>
 									<p>
@@ -85,10 +90,9 @@ class Detail extends Component {
 
 						</div>
 
-						<h1>This is Heading one.</h1>
-						<p>these are paragraphs these are paragraphs these are paragraphs these are paragraphs
-						these are paragraphs these are paragraphs these are paragraphs
-						these are paragraphs these are paragraphs these are paragraphs
+						<h1>Details:</h1>
+						<p style={{fontSize: '18px', fontWeight: 'bold'}}>
+						{this.state.data.detail}
 </p>
 
 					</div>
@@ -111,6 +115,7 @@ class Detail extends Component {
 						</div>
 						<div className="below-price-container">
 							<div className="userDataBox">
+							<h4>Posted By:</h4>
 								<div>
 									<img className="ui avatar image" alt="img"
 										src=
@@ -126,10 +131,13 @@ class Detail extends Component {
 
 							</div>
 							<div className="user-phone userDataBox">
-								<FontAwesomeIcon style={{ marginRight: '5px' }} icon="phone" />
+							<div><FontAwesomeIcon style={{ marginRight: '5px', color: '#e91e63' }} icon="phone" />
 
 								0{this.state.data.phone}
-								<span>(Verified)</span>
+								<span>(Verified)</span></div>
+							<div>
+							<FontAwesomeIcon  style={{ marginRight: '5px', color: '#8e24aa' }} icon="envelope" />
+							{this.state.data.email}</div>
 							</div>
 
 							<div className="userDataBox">

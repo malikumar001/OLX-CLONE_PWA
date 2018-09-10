@@ -11,6 +11,7 @@ const AdSchema = new Schema({
     uniqueId: String,
     phone: String,
     milliSeconds: Number,
+    date: String,
     detail: String,
     price: Number,
     location: String,
