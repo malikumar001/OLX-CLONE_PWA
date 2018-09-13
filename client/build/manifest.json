@@ -11,10 +11,17 @@
       "src": "icon.png",
       "sizes": "512x512",  
       "type": "image/png"  
+    },
+    {  
+      "src": "icon2.png",
+      "sizes": "144x144",  
+      "type": "image/png"  
     }
   ],
   "start_url": "./index.html",
   "display": "standalone",
-  "theme_color": "#ff6358",
-  "background_color": "#dbe2ea"
+  "dir": "ltr",
+  "scope": ".",
+  "theme_color": "#2965BE",
+  "background_color": "#2965BE"
 }

@@ -7,6 +7,8 @@ const uuidv4 = require('uuid/v4');
 const path = require('path');
 
 const Ad = require('../models/Ad');
+const User = mongoose.model("Users");
+
 
 module.exports = app => {
 
@@ -85,6 +87,40 @@ app.get("/api/allads", (req, res) => {
 
 });
   
+
+app.post('/api/ad_id', async (req, res) => {
+
+   const data = await User.findOne({googleId: req.body.uniqueId});
+   const favorite = [...data.favoriteAds];
+   favorite.push(req.body);
+  
+  
+   User.findOneAndUpdate({googleId: req.body.uniqueId},
+     { $set: {favoriteAds: favorite }},
+    {new: true}).then(doc => console.log(doc)).catch(doc => console.log("something went wrong"))
+
+
+    // User.findOneAndUpdate({googleId: req.body.uniqueId}, {favoriteAds: [] }, (err, doc) => {
+
+    //   const data = doc.favoriteAds;
+    //   data.push(req.body);
+    //   doc.favoriteAds = data
+    // } )
+
+
+  // User.findOne({googleId: req.body.uniqueId})
+  // .then(data => {
+  //   favoriteAds: [1,2,3]
+  // }).save();
+
+
+
+
+  // console.log(req.body);
+})
+
+
+
 
   app.get(
     "/auth/google",

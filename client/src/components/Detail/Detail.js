@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { Link } from 'react-router-dom';
 import axios from 'axios';
 
+// import { connect } from 'react-redux';
+
 import './Detail.css';
 // import mobile from '../../assets/mobile.jpg';
 import ShowImages from './ShowImages/ShowImages';
@@ -13,11 +15,23 @@ class Detail extends Component {
 
 	state = {
 		showAllImages: false,
-		data: []
+		data: [],
+		favorites: [],
+		favoriteAds: []
 	}
 
 	handleImageShow = () => {
 		this.setState({ showAllImages: !this.state.showAllImages })
+	}
+
+	handleFavorite = () => {
+
+		axios.post('/api/ad_id', {
+			ad_id: this.props.match.params._id,
+			uniqueId: this.state.favorites.googleId
+		})
+		.then(ad => console.log(ad))
+		
 	}
 
 	componentDidMount() {
@@ -26,11 +40,24 @@ class Detail extends Component {
 				const ad = data.filter(ad => ad._id === this.props.match.params._id);
 				this.setState({ data: ad[0] })
 			})
-	}
 
-	render() {
-		const {data} = this.state;
 
+			axios.get('/api/user').then((user) => {
+				this.setState({favorites: user.data})
+				this.setState({favoriteAds: user.data.favoriteAds})
+			})
+
+			
+
+			
+		}
+		
+		render() {
+ 
+		const {data, favorites} = this.state;
+		
+		const newArray = this.state.favoriteAds.filter(item => item.ad_id === this.state.data._id)
+		
 		return (
 <div>
 			<div className="main-container" >
@@ -43,15 +70,19 @@ class Detail extends Component {
 
 					<div className="left-container-child">
 						<div className="upper-border">
-							<h1>{this.state.data.product}</h1>
+						<div className="favorite-container">
+							<div className="product-title">{this.state.data.product}</div>
+							<div className="flexer"></div>
+							<div><a onClick={this.handleFavorite} href="#"><FontAwesomeIcon 
+							className="favorite-icon"
+							style={{color: newArray.length !== 0 ? "red" : "#E0E0E0"}}
+							icon="bookmark"/></a></div>
+							</div>
+							
 							<div className="detail-container">
 								<div>
 								<p className="date-location"><FontAwesomeIcon className="calender-icon" icon="calendar-alt"/><span style={{marginLeft: '8px'}}>Added on: {this.state.data.date} </span></p>
 									  </div>
-
-        
-
-
 								<div>
 									<p>
 										<FontAwesomeIcon
@@ -155,7 +186,6 @@ class Detail extends Component {
 					</div>
 				</div>
 
-
 			</div>
 			
 			<RelatedAds card={data}/>
@@ -169,5 +199,10 @@ class Detail extends Component {
 		);
 	}
 }
+
+
+
+
+
 
 export default Detail;

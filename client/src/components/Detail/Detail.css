@@ -32,7 +32,25 @@
 	
 
 } 
- 
+
+.favorite-icon {
+	font-size: 25px;
+	color: #bdbdbd;
+}
+
+.favorite-container {
+	display: flex;
+	flex-direction: row;
+}
+
+.product-title{
+	font-size: 25px;
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+
+
 	/* ==========================PRICE=============================== */
 
 	.calender-icon {
@@ -118,4 +136,5 @@
 
 .detail-container div {
 	margin: 10px;
+	margin-top: 25px;
 }

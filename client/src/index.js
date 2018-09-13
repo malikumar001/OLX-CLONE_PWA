@@ -13,7 +13,7 @@ import reduxThunk from 'redux-thunk';
 
 import reducers from './reducers/index';
 import App from './containers/App';
-// import registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker from './registerServiceWorker';
 
 const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 
@@ -23,4 +23,4 @@ ReactDOM.render(
     document.getElementById('root')
 );
 
-// registerServiceWorker();
+registerServiceWorker();

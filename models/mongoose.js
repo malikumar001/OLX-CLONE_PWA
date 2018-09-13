@@ -6,7 +6,8 @@ const userSchema = {
     googleId: String,
     name: String,
     email: String,
-    profilePhoto: String
+    profilePhoto: String,
+    favoriteAds: Array
 };
 
 
