@@ -56,7 +56,7 @@ class Detail extends Component {
  
 		const {data, favorites} = this.state;
 		
-		const newArray = this.state.favoriteAds.filter(item => item.ad_id === this.state.data._id)
+		const newArray = []
 		
 		return (
 <div>

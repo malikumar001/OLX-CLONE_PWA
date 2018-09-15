@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import './SubmitAd.css';
 import axios from 'axios';
 import FormErrorMessage from '../../components/FormErrorMessage/FormErrorMessage';
 import Login from '../Login/Login';
-
-
 
 
 const catagory = [
@@ -78,6 +75,7 @@ class SubmitAd extends Component {
         redirect: false
 
     }
+
   }
 
   validate(data) {

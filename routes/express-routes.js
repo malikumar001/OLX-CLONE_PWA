@@ -133,6 +133,7 @@ app.post('/api/ad_id', async (req, res) => {
     "/auth/google/callback",
      passport.authenticate("google"),
       (req, res) => {
+
         res.redirect('/')
       }    
     );
